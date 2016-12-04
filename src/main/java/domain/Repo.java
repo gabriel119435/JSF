@@ -43,7 +43,7 @@ public class Repo {
 				lista.add(new Message(rs.getString("msg")));
 			}
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 			System.out.println("failed to read entire table");
 		} finally {
 			stm.close();
