@@ -8,18 +8,16 @@
 	<title>Chat</title>
 </h:head>
 <h:body>
-	<h3>Site's body</h3>
+	<h3>body</h3>
 	<h:form>
-		<h:inputText id="id1" value="#{unicoBean.text}" />
-		<h:commandButton id="botao" value="Submit" action="#{unicoBean.test}"
-			onclick="test()" />
+		<h:inputText id="id1" value="#{bean.text}" />
+		<h:commandButton id="botao" value="submit" onclick="test()" />
 	</h:form>
 	<h:form>
-		<h:commandButton id="botao2" value="Clean DB"
-			action="#{unicoBean.erase}" />
+		<h:commandButton id="id2" value="truncate" action="#{bean.erase}" />
 	</h:form>
 
-	<h:dataTable value="#{unicoBean.all}" var="msg">
+	<h:dataTable value="#{bean.all}" var="msg">
 		<h:column>
 			#{msg.text}
 		</h:column>

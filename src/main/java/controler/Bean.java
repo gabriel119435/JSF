@@ -8,12 +8,12 @@ import domain.Message;
 
 @ManagedBean
 @ApplicationScoped
-public class UnicoBean {
+public class Bean {
 	Facade facade = new Facade();
 
 	public void setText(String s) throws Exception {
 		facade.setText(s);
-		this.warn();
+		System.out.println("inserted");
 	}
 
 	public String getText() {
@@ -26,15 +26,11 @@ public class UnicoBean {
 
 	public void erase() throws Exception {
 		facade.erase();
-		this.warn();
+		System.out.println("truncated");
 	}
 
 	public void test() {
 		System.out.println("bean called on jsf");
-	}
-
-	public void warn() {
-		System.out.println("warned");
 	}
 
 }

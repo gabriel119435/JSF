@@ -1,6 +1,5 @@
 package domain;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Facade {
@@ -11,18 +10,11 @@ public class Facade {
 	}
 
 	public List<Message> getAll() throws Exception {
-		List<Message> list = new ArrayList<Message>();
-		try {
-			list = repo.all();
-		} catch (Exception e) {
-			System.out.println(e);
-			System.out.println("failed to receive entire table");
-		}
-		return list;
+		return repo.all();
 	}
 
 	public void erase() throws Exception {
-		repo.delete();
+		repo.clear();
 	}
 
 }
